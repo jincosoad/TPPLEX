@@ -1,0 +1,92 @@
+{
+  "sdk": 3,
+  "version": 100,
+  "name": "Plex Controller",
+  "id": "TPPLEX",
+  "plugin_start_cmd": "%TP_PLUGIN_FOLDER%TPPLEX\\main.exe",
+  "configuration": {
+    "colorDark": "#e5a00d",
+    "colorLight": "#e5a00d"
+  },
+  "settings": [
+    {
+      "name": "Plex Server URL",
+      "type": "text",
+      "default": "",
+      "maxLength": 100
+    },
+    {
+      "name": "Plex Username",
+      "type": "text",
+      "default": "",
+      "maxLength": 100
+    },
+    {
+      "name": "Plex Password",
+      "type": "text",
+      "password": true,
+      "default": "",
+      "maxLength": 100
+    },
+    {
+      "name": "Plex Client Name",
+      "type": "text",
+      "default": "",
+      "maxLength": 100
+    }
+  ],
+  "categories": [
+    {
+      "id": "TPPLEX",
+      "name": "Plex",
+      "imagepath": "%TP_PLUGIN_FOLDER%TPPLEX\\icon.png",
+      "actions": [
+        {
+          "id": "TPPLEX_TOGGLE_PLAY_PAUSE",
+          "name": "Toggle Play/Pause",
+          "prefix": "Plex",
+          "type": "communicate"
+        },
+        {
+          "id": "TPPLEX_PLAY",
+          "name": "Play",
+          "prefix": "Plex",
+          "type": "communicate"
+        },
+        {
+          "id": "TPPLEX_PAUSE",
+          "name": "Pause",
+          "prefix": "Plex",
+          "type": "communicate"
+        },
+        {
+          "id": "TPPLEX_STOP",
+          "name": "Stop",
+          "prefix": "Plex",
+          "type": "communicate"
+        },
+        {
+          "id": "TPPLEX_NEXT",
+          "name": "Next",
+          "prefix": "Plex",
+          "type": "communicate"
+        },
+        {
+          "id": "TPPLEX_PREV",
+          "name": "Previous",
+          "prefix": "Plex",
+          "type": "communicate"
+        }
+      ],
+      "states": [
+        {
+          "id": "TPPLEX_NOW_PLAYING",
+          "type": "text",
+          "desc": "Plex Now Playing",
+          "default": "Nothing Playing"
+        }
+      ],
+      "events": []
+    }
+  ]
+}

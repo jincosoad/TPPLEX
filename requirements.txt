@@ -1,0 +1,3 @@
+TouchPortal-API
+PlexAPI
+pyinstaller
